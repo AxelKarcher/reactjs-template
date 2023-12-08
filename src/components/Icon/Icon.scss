@@ -1,0 +1,16 @@
+.icon-container {
+  filter: var(--colors-dropShadow);
+  transition: all var(--durations-normal);
+
+  &.small {height: var(--fontSizes-medium);}
+
+  &.medium {height: var(--fontSizes-medium);}
+
+  &.large {height: var(--fontSizes-large);}
+
+  &.clickable {
+    cursor: pointer;
+
+    &:hover {filter: var(--colors-dropShadowHover);}
+  }
+}

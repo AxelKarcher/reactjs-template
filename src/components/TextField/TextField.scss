@@ -1,0 +1,29 @@
+.text-field-container {
+  all: unset;
+  padding: calc(var(--ui-padding) / 2);
+  border: 2px solid var(--colors-text);
+  box-shadow: var(--colors-boxShadow);
+  border-radius: var(--ui-radius);
+  font-weight: bold;
+  transition: all var(--durations-normal);
+
+  &.enabled {
+    cursor: text;
+
+    &:focus {
+      border-color: var(--colors-primary);
+
+      &.danger {border-color: var(--colors-danger);}
+    }
+  }
+
+  &.disabled {
+    background-color: var(--colors-disabled);
+    border-color: var(--colors-disabled);
+    color: var(--colors-disabledText);
+
+    &:hover {
+      cursor: not-allowed;
+    }
+  }
+}

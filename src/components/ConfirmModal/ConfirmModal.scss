@@ -1,0 +1,8 @@
+.confirm-modal-container {
+  .btns {
+    display: flex;
+    gap: var(--ui-margin);
+
+    .btn {flex: 1;}
+  }
+}
