@@ -7,7 +7,7 @@ const Button = ({label, onClick, isDisabled, isDanger, className}) => {
         button-container
         ${isDanger && 'danger'}
         ${isDisabled ? 'disabled' : 'enabled'}
-        ${ className}
+        ${className}
       `}
       onClick={onClick}
       disabled={isDisabled}

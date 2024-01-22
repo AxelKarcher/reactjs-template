@@ -1,27 +1,49 @@
 import Separator from 'components/Separator/Separator'
 import closeSvg from 'icons/close.svg'
 import Icon from 'components/Icon/Icon'
+import Text from 'components/Text/Text'
+
+import leftArrow from 'icons/leftArrow.svg'
 import './Panel.scss'
 
 const Panel = ({
-  label, children, className, onClose,
-  onClick, childrenClassName
+  title, children, className, onClose, isOpen, icons,
+  onClick, childrenClassName, forwardedRef, isCollapser, onTitleClick
 }) => {
+
+  const handleTitleClick = (e) => {
+    e.stopPropagation()
+    onTitleClick()
+  }
+
+  const isOpened = (isCollapser && isOpen) || !isCollapser
+
   return (
-    <div className={`panel-container ${className}`} onClick={onClick}>
+    <div
+      className={`panel-container ${isCollapser && 'collapser'} ${className}`}
+      onClick={onClick}
+      ref={forwardedRef}
+    >
       {
-        label &&
-        <div className='label-area'>
+        title &&
+        <div className='title-area' onClick={onTitleClick ? handleTitleClick : null}>
           <span className='row'>
-            <span className='label'>{label}</span>
+            <span className='title-row'>
+              {icons?.map((icon, i) => (<Icon key={i} className={`title-icon ${isOpened && 'colored'}`} src={icon} />))}
+              <Text className='title-panel' text={title} />
+            </span>
+            {isCollapser && <Icon className={isOpened ? 'opened' : 'closed'} src={leftArrow} />}
             {onClose && <Icon onClick={onClose} src={closeSvg} />}
           </span>
-          <Separator />
+          {isOpened && <Separator />}
         </div>
       }
-      <div className={`children-container ${childrenClassName}`}>
-        {children}
-      </div>
+      {
+        isOpened &&
+        <div className={`children-container ${childrenClassName}`}>
+          {children}
+        </div>
+      }
     </div>
   )
 }

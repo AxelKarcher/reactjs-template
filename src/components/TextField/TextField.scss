@@ -22,8 +22,6 @@
     border-color: var(--colors-disabled);
     color: var(--colors-disabledText);
 
-    &:hover {
-      cursor: not-allowed;
-    }
+    &:hover {cursor: not-allowed;}
   }
 }

@@ -5,13 +5,13 @@ import './ConfirmModal.scss'
 
 const ConfirmModal = ({
   children, isActive, className, handleCancel,
-  label, handleClose, handleConfirm
+  title, handleClose, handleConfirm
 }) => {
   return (
     <Modal
       className={`confirm-modal-container ${className}`}
       handleClose={handleClose}
-      label={label}
+      title={title}
       isActive={isActive}
     >
       {children}

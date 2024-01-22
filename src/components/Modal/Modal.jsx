@@ -1,18 +1,35 @@
+import {useState} from 'react'
+
 import Panel from 'components/Panel/Panel'
 import './Modal.scss'
 
-const Modal = ({isActive, handleClose, children, className, label}) => {
+const Modal = ({isActive, handleClose, children, className, title}) => {
 
-  const handleCloseOnChildren = (e) => {e?.stopPropagation()}
+  const [isClosing, setIsClosing] = useState(false)
+
+  const handleLocalClose = () => {
+    setIsClosing(true)
+    setTimeout(() => {
+      handleClose()
+      setIsClosing(false)
+    }, 500)
+  }
 
   if (isActive) {
     return (
-      <div className={`modal-container ${className}`} onClick={handleClose}>
+      <div
+        onClick={handleLocalClose}
+        className={`
+          modal-container
+          ${isClosing && 'inactive'}
+          ${className}`
+        }
+      >
         <Panel
           childrenClassName='children-container'
-          onClose={handleClose}
-          label={label}
-          onClick={handleCloseOnChildren}
+          onClose={handleLocalClose}
+          title={title}
+          onClick={(e) => e?.stopPropagation()}
         >
           {children}
         </Panel>

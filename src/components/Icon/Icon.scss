@@ -2,11 +2,11 @@
   filter: var(--colors-dropShadow);
   transition: all var(--durations-normal);
 
-  &.small {height: var(--fontSizes-medium);}
+  &.small {height: var(--iconSizes-medium);}
 
-  &.medium {height: var(--fontSizes-medium);}
+  &.medium {height: var(--iconSizes-medium);}
 
-  &.large {height: var(--fontSizes-large);}
+  &.large {height: var(--iconSizes-large);}
 
   &.clickable {
     cursor: pointer;

@@ -10,17 +10,17 @@
     animation: loading var(--durations-long) ease infinite;
     border-top-color: var(--colors-text);
     border-bottom-color: var(--colors-text);
-  
+
     @keyframes loading {to {transform: rotate(1turn);}}
-  
+
     &.margin-top {margin-top: var(--ui-margin);}
-  
+
     &.small {
       height: calc(var(--fontSizes-small) * 2);
       width: calc(var(--fontSizes-small) * 2);
       border-width: 5px;
     }
-  
+
     &.large {
       height: calc(var(--fontSizes-large) * 2);
       width: calc(var(--fontSizes-large) * 2);

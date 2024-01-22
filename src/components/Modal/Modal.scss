@@ -1,3 +1,13 @@
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeOut {
+  from {opacity: 1;}
+  to {opacity: 0;}
+}
+
 .modal-container {
   position: absolute;
   top: 0;
@@ -9,6 +19,9 @@
   justify-content: center;
   z-index: 100;
   background-color: var(--colors-cloudy);
+  animation: fadeIn var(--durations-mid) forwards;
+
+  &.inactive {animation: fadeOut var(--durations-mid) forwards;}
 
   .children-container {
     min-width: 200px;

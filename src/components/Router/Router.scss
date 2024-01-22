@@ -1,15 +1,15 @@
-$fontSizesCoef: 0.30vw;
-
 #router-container {
   // COLORS
   --colors-background: hsl(0, 0%, 96%);
   --colors-primary: rgb(0, 192, 118);
   --colors-secondary: #96D4BC;
   --colors-text: #333333;
+  --colors-textBis: #eaeaea;
   --colors-cloudy: #00C07644;
+  --colors-panel: white;
   --colors-boxShadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   --colors-dropShadow: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.5));
-  --colors-dropShadowHover: drop-shadow(0px 0px 2px rgba(0, 192, 118, 0.5));
+  --colors-dropShadowHover: drop-shadow(0px 0px 2px #1F4E7980);
   --colors-shadow: #333333;
   --colors-disabled: rgb(184, 184, 184);
   --colors-disabledText: rgb(218, 218, 218);
@@ -17,6 +17,7 @@ $fontSizesCoef: 0.30vw;
 
   // DURATIONS
   --durations-normal: 0.2s;
+  --durations-mid: 0.5s;
   --durations-long: 1s;
 
   // UI
@@ -25,9 +26,22 @@ $fontSizesCoef: 0.30vw;
   --ui-radius: 6px;
 
   // FONTSIZES
-  --fontSizes-small: calc(14px + #{$fontSizesCoef});
+  $fontSizesCoef: 0.40vw;
+  --fontSizes-small: calc(13px + #{$fontSizesCoef});
   --fontSizes-medium: calc(16px + #{$fontSizesCoef});
-  --fontSizes-large: calc(18px + #{$fontSizesCoef});
+  --fontSizes-large: calc(20px + #{$fontSizesCoef});
+  --fontSizes-title: calc(30px + #{2.75vw});
+  --fontSizes-subTitle: calc(20px + #{1vw});
+
+  // ICONSIZES
+  $iconSizesCoef: 0.40vw;
+  --iconSizes-small: calc(20px + #{$iconSizesCoef});
+  --iconSizes-medium: calc(40px + #{$iconSizesCoef});
+  --iconSizes-large: calc(60px + #{$iconSizesCoef});
+
+  // BREAKPOINTS
+
+  // MISCELLANEOUS
 
   width: 100vw;
   height: 100vh;
@@ -35,17 +49,14 @@ $fontSizesCoef: 0.30vw;
   font-size: var(--fontSizes-medium);
   background-color: var(--colors-background);
 
-  ::-webkit-scrollbar {width: 6px;}
+  ::-webkit-scrollbar {width: 0;}
 
-  ::-webkit-scrollbar-track {
-    background: var(--colors-secondary);
-    border-radius: 10px;
+  ::-webkit-scrollbar-thumb {background: var(--colors-primary);}
+
+  ::-webkit-scrollbar-track {background: var(--colors-secondary);}
+
+  ::selection {
+    background-color: var(--colors-primary);
+    color: white;
   }
-
-  ::-webkit-scrollbar-thumb {
-    background: var(--colors-primary);
-    border-radius: 10px;
-  }
-
-  ::selection {background-color: var(--colors-primary);}
 }
