@@ -1,7 +1,7 @@
 import './Spinner.scss'
 
-const Spinner = ({isLoading, size, className}) => {
-  if (isLoading) return (
+const Spinner = ({size = 'medium', className}) => {
+  return (
     <div className='spinner-container'>
       <div className={`spinner ${size} ${className}`} />
     </div>

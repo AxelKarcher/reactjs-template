@@ -3,8 +3,6 @@
   justify-content: center;
 
   .spinner {
-    height: calc(var(--fontSizes-medium) * 2);
-    width: calc(var(--fontSizes-medium) * 2);
     border: 2px solid transparent;
     border-radius: 50%;
     animation: loading var(--durations-long) ease infinite;
@@ -19,6 +17,11 @@
       height: calc(var(--fontSizes-small) * 2);
       width: calc(var(--fontSizes-small) * 2);
       border-width: 5px;
+    }
+
+    &.medium {
+      height: calc(var(--fontSizes-medium) * 2);
+      width: calc(var(--fontSizes-medium) * 2);
     }
 
     &.large {

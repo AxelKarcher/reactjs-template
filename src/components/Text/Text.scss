@@ -1,7 +1,9 @@
 .text-container {
   &.clickable {cursor: pointer;}
 
-  &.weight {font-weight: bold;}
+  &.bold {font-weight: bold;}
+
+  &.italic {font-style: italic;}
 
   &.small {font-size: var(--fontSizes-small);}
 

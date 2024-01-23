@@ -30,7 +30,7 @@ const Panel = ({
           <span className='row'>
             <span className='title-row'>
               {icons?.map((icon, i) => (<Icon key={i} className={`title-icon ${isOpened && 'colored'}`} src={icon} />))}
-              <Text className='title-panel' text={title} />
+              <Text className='title-panel'>{title}</Text>
             </span>
             {isCollapser && <Icon className={isOpened ? 'opened' : 'closed'} src={leftArrow} />}
             {onClose && <Icon onClick={onClose} src={closeSvg} />}

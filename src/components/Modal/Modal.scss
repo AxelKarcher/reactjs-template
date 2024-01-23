@@ -23,8 +23,5 @@
 
   &.inactive {animation: fadeOut var(--durations-mid) forwards;}
 
-  .children-container {
-    min-width: 200px;
-    width: 25vw;
-  }
+  .children-container {flex: 1;}
 }

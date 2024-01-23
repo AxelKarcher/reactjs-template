@@ -1,18 +1,19 @@
 import './Text.scss'
 
-const Text = ({text, isWeight, size, className, onClick}) => {
+const Text = ({children, isBold, size, isItalic, className, onClick}) => {
   return (
     <span
       onClick={onClick}
       className={`
         text-container
         ${onClick && 'clickable'}
-        ${isWeight && 'weight'}
+        ${isBold && 'bold'}
+        ${isItalic && 'italic'}
         ${size}
         ${className}
       `}
     >
-      {text}
+      {children}
     </span>
   )
 }

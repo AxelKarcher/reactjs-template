@@ -1,6 +1,8 @@
 .confirm-modal-container {
   .btns {
+    width: 100%;
     display: flex;
+    justify-content: space-around;
     gap: var(--ui-margin);
 
     .btn {flex: 1;}

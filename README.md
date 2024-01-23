@@ -1,4 +1,4 @@
-# reactjs-template v2.1
+# reactjs-template v2.2
 My ReactJS project template with Vite
 
 To clone and use it as a new repo:

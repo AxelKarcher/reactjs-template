@@ -1,0 +1,22 @@
+.carousel-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ui-margin);
+
+  .title {
+    font-weight: bold;
+    padding-left: var(--ui-padding);
+    box-sizing: border-box;
+  }
+
+  .elements {
+    padding: 0 var(--ui-padding);
+    box-sizing: border-box;
+    width: 100vw;
+    display: flex;
+    gap: var(--ui-margin);
+    padding-bottom: var(--ui-padding);
+    box-sizing: border-box;
+    overflow-x: auto;
+  }
+}

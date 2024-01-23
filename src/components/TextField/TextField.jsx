@@ -3,7 +3,7 @@ import {useRef} from 'react'
 import './TextField.scss'
 
 const TextField = ({
-  value, placeholder, isDisabled,
+  value, placeholder, isDisabled, isSecure,
   isDanger, onChange, className, onEnter
 }) => {
 
@@ -25,7 +25,7 @@ const TextField = ({
         ${isDisabled ? 'disabled' : 'enabled'}
         ${className}
       `}
-      type='text'
+      type={isSecure ? 'password' : 'text'}
       value={value}
       placeholder={placeholder}
       disabled={isDisabled}
