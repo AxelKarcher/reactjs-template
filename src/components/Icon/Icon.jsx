@@ -1,6 +1,6 @@
 import './Icon.scss'
 
-const Icon = ({src, onClick, size = 'medium', className}) => {
+const Icon = ({ src, onClick, size = 'medium', className }) => {
   return (
     <img
       className={`

@@ -1,7 +1,7 @@
 import './BulletPoints.scss'
 import Text from 'components/Text/Text'
 
-const BulletPoints = ({title, list, isNumbered = false}) => {
+const BulletPoints = ({ title, list, isNumbered = false }) => {
   return (
     <div className='bullet-points-container'>
       <Text isBold>{title}</Text>

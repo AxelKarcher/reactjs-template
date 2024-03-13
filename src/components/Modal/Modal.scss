@@ -1,11 +1,11 @@
 @keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity: 1;}
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 @keyframes fadeOut {
-  from {opacity: 1;}
-  to {opacity: 0;}
+  from { opacity: 1; }
+  to { opacity: 0; }
 }
 
 .modal-container {
@@ -21,7 +21,12 @@
   background-color: var(--colors-cloudy);
   animation: fadeIn var(--durations-mid) forwards;
 
-  &.inactive {animation: fadeOut var(--durations-mid) forwards;}
+  &.inactive { animation: fadeOut var(--durations-mid) forwards; }
 
-  .children-container {flex: 1;}
+  .modal-panel {
+    min-width: 300px;
+    max-width: 50vw;
+  }
+
+  .modal-children { flex: 1; }
 }

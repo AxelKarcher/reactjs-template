@@ -1,19 +1,19 @@
 #router-container {
   // COLORS
-  --colors-background: hsl(0, 0%, 96%);
-  --colors-primary: rgb(0, 192, 118);
+  --colors-background: #f5f5f5;
+  --colors-primary: #00c076;
   --colors-secondary: #96D4BC;
   --colors-text: #333333;
   --colors-textBis: #eaeaea;
   --colors-cloudy: #00C07644;
-  --colors-panel: white;
-  --colors-boxShadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  --colors-dropShadow: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.5));
+  --colors-panel: #ffffff;
+  --colors-boxShadow: #00000099 0px 1px 5px;
+  --colors-dropShadow: drop-shadow(0px 0px 2px #00000080);
   --colors-dropShadowHover: drop-shadow(0px 0px 2px #1F4E7980);
   --colors-shadow: #333333;
-  --colors-disabled: rgb(184, 184, 184);
-  --colors-disabledText: rgb(218, 218, 218);
-  --colors-danger: red;
+  --colors-disabled: #b8b8b8;
+  --colors-disabledText: #dadada;
+  --colors-danger: #ff0000;
 
   // DURATIONS
   --durations-normal: 0.2s;
@@ -21,23 +21,23 @@
   --durations-long: 1s;
 
   // UI
-  --ui-padding: 14px;
-  --ui-margin: 14px;
+  --ui-padding: 12px;
+  --ui-margin: 12px;
   --ui-radius: 6px;
 
   // FONTSIZES
   $fontSizesCoef: 0.40vw;
-  --fontSizes-small: calc(13px + #{$fontSizesCoef});
+  --fontSizes-small: calc(12px + #{$fontSizesCoef});
   --fontSizes-medium: calc(16px + #{$fontSizesCoef});
   --fontSizes-large: calc(20px + #{$fontSizesCoef});
   --fontSizes-title: calc(30px + #{2.75vw});
   --fontSizes-subTitle: calc(20px + #{1vw});
 
   // ICONSIZES
-  $iconSizesCoef: 0.40vw;
-  --iconSizes-small: calc(20px + #{$iconSizesCoef});
-  --iconSizes-medium: calc(40px + #{$iconSizesCoef});
-  --iconSizes-large: calc(60px + #{$iconSizesCoef});
+  $iconSizesCoef: 0.4vw;
+  --iconSizes-small: calc(15px + #{$iconSizesCoef});
+  --iconSizes-medium: calc(30px + #{$iconSizesCoef});
+  --iconSizes-large: calc(45px + #{$iconSizesCoef});
 
   // BREAKPOINTS
 
@@ -48,8 +48,12 @@
   color: var(--colors-text);
   font-size: var(--fontSizes-medium);
   background-color: var(--colors-background);
+  overflow: hidden;
 
-  ::-webkit-scrollbar {width: 0;}
+  ::-webkit-scrollbar {
+    width: 0;
+    height: 4px;
+  }
 
   ::-webkit-scrollbar-thumb {background: var(--colors-primary);}
 
@@ -57,6 +61,6 @@
 
   ::selection {
     background-color: var(--colors-primary);
-    color: white;
+    color: #ffffff;
   }
 }

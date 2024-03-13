@@ -1,6 +1,9 @@
 import './Text.scss'
 
-const Text = ({children, isBold, size, isItalic, className, onClick}) => {
+const Text = ({
+  children, isBold, size, isItalic,
+  className, onClick
+}) => {
   return (
     <span
       onClick={onClick}

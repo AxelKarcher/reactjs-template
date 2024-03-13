@@ -3,5 +3,18 @@
   flex-direction: column;
   gap: var(--ui-margin);
 
-  &.no-gap {gap: 0;}
+  &.no-gap { gap: 0; }
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: var(--ui-margin);
+
+  &.no-gap { gap: 0; }
+
+  &.flex-end { justify-content: flex-end; }
+
+  &.wrap { flex-wrap: wrap; }
 }

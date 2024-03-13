@@ -1,22 +1,28 @@
 .carousel-container {
   display: flex;
   flex-direction: column;
-  gap: var(--ui-margin);
 
-  .title {
-    font-weight: bold;
-    padding-left: var(--ui-padding);
+  .carousel-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 var(--ui-padding);
     box-sizing: border-box;
+
+    .right-content {
+      display: flex;
+      align-items: center;
+    }
   }
 
   .elements {
-    padding: 0 var(--ui-padding);
-    box-sizing: border-box;
     width: 100vw;
     display: flex;
     gap: var(--ui-margin);
-    padding-bottom: var(--ui-padding);
+    padding: var(--ui-padding);
     box-sizing: border-box;
     overflow-x: auto;
+
+    > * { flex-shrink: 0; }
   }
 }

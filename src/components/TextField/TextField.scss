@@ -1,11 +1,14 @@
 .text-field-container {
   all: unset;
-  padding: calc(var(--ui-padding) / 2);
+  padding: 0 calc(var(--ui-padding) / 2);
   border: 2px solid var(--colors-text);
-  box-shadow: var(--colors-boxShadow);
   border-radius: var(--ui-radius);
+  box-sizing: border-box;
+  box-shadow: var(--colors-boxShadow);
   font-weight: bold;
   transition: all var(--durations-normal);
+
+  &.full-width { width: 100%; }
 
   &.enabled {
     cursor: text;
@@ -13,7 +16,7 @@
     &:focus {
       border-color: var(--colors-primary);
 
-      &.danger {border-color: var(--colors-danger);}
+      &.danger { border-color: var(--colors-danger); }
     }
   }
 
@@ -21,7 +24,6 @@
     background-color: var(--colors-disabled);
     border-color: var(--colors-disabled);
     color: var(--colors-disabledText);
-
-    &:hover {cursor: not-allowed;}
+    cursor: not-allowed;
   }
 }

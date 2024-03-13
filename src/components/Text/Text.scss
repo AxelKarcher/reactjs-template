@@ -1,11 +1,12 @@
 .text-container {
-  &.clickable {cursor: pointer;}
 
-  &.bold {font-weight: bold;}
+  &.clickable { cursor: pointer; }
 
-  &.italic {font-style: italic;}
+  &.bold { font-weight: bold; }
 
-  &.small {font-size: var(--fontSizes-small);}
+  &.italic { font-style: italic; }
 
-  &.large {font-size: var(--fontSizes-large);}
+  &.small { font-size: var(--fontSizes-small); }
+
+  &.large { font-size: var(--fontSizes-large); }
 }

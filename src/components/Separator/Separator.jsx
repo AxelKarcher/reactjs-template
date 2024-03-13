@@ -1,6 +1,6 @@
 import './Separator.scss'
 
-const Separator = ({className}) => {
+const Separator = ({ className }) => {
   return (
     <div className={`separator-container ${className}`} />
   )

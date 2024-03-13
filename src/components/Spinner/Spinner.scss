@@ -9,9 +9,9 @@
     border-top-color: var(--colors-text);
     border-bottom-color: var(--colors-text);
 
-    @keyframes loading {to {transform: rotate(1turn);}}
+    @keyframes loading { to { transform: rotate(1turn); } }
 
-    &.margin-top {margin-top: var(--ui-margin);}
+    &.margin-top { margin-top: var(--ui-margin); }
 
     &.small {
       height: calc(var(--fontSizes-small) * 2);

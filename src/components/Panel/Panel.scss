@@ -1,11 +1,11 @@
 @keyframes opening {
-  from {transform: rotateZ(0deg);}
-  to {transform: rotateZ(-90deg);}
+  from { transform: rotateZ(0deg); }
+  to { transform: rotateZ(-90deg); }
 }
 
 @keyframes closing {
-  from {transform: rotateZ(-90deg);}
-  to {transform: rotateZ(0deg);}
+  from { transform: rotateZ(-90deg); }
+  to { transform: rotateZ(0deg); }
 }
 
 .panel-container {
@@ -13,7 +13,7 @@
   box-shadow: var(--colors-boxShadow);
   background-color: var(--colors-panel);
 
-  &.collapser {cursor: pointer;}
+  &.collapser { cursor: pointer; }
 
   .title-area {
     display: flex;
@@ -34,17 +34,17 @@
         .title-icon {
           filter: grayscale(100%);
 
-          &.colored {filter: grayscale(0%);}
+          &.colored { filter: grayscale(0%); }
         }
       }
 
-      .title-panel {font-weight: bold;}
+      .title-panel { font-weight: bold; }
 
-      .opened {animation: opening 0.25s forwards;}
+      .opened { animation: opening 0.25s forwards; }
 
-      .closed {animation: closing 0.25s forwards;}
+      .closed { animation: closing 0.25s forwards; }
 
-      img {height: var(--fontSizes-medium);}
+      img { height: var(--fontSizes-medium); }
     }
   }
 
